@@ -22,13 +22,13 @@ In the spirit of the holiday season, we are going to embark on a project to crea
 ---
 <a name="data"></a>
 ## Data
-Data Format: The data is stored in a CSV (Comma Separated Values) file format. Each row in the CSV file represents a single line of a Christmas song or carol.
+* **Data Format**: The data is stored in a CSV (Comma Separated Values) file format. Each row in the CSV file represents a single line of a Christmas song or carol.
 
-Data Source: The data is obtained from a GitHub Gist. A Gist is a simple way to share code snippets, text, and other types of content on GitHub. The URL to the Gist containing the input data is as follows:
+* **Data Source**: The data is obtained from a GitHub Gist. A Gist is a simple way to share code snippets, text, and other types of content on GitHub. The URL to the Gist containing the input data is as follows:
 
    URL: https://gist.githubusercontent.com/DeastinY/899d532069febdb969d50eb68b7be583/raw/d4c2b7d6cd58639274fa2f061db6905c58853947/input.txt
 
-Data Contents: Each row in the CSV file contains a line of text, which represents a line from a Christmas song or carol. The data may include song titles, verses, refrains, choruses, bridges, and other elements commonly found in songs.
+* **Data Contents**: Each row in the CSV file contains a line of text, which represents a line from a Christmas song or carol. The data may include song titles, verses, refrains, choruses, bridges, and other elements commonly found in songs.
 
 ---
 <a name="step1"></a>
