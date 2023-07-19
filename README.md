@@ -73,7 +73,7 @@ The last two lines suppress any warning messages that might be displayed during 
 ## Data Preprocessing
 Before we can start training our machine learning model, we need to preprocess the data. In this section, we will download a dataset of Christmas song lyrics and clean it to remove unnecessary elements.
 
----
+
 <a name="step2.1"></a>
 ### Downloading and Reading the Dataset
 We will begin by downloading a dataset of Christmas song lyrics from a publicly available source. Using the `requests` library, we can fetch the dataset from a URL. Then, using the `pandas` library, we will read the downloaded dataset into a pandas DataFrame.
@@ -105,7 +105,7 @@ Next, we use the `pd.read_csv()` function from the pandas library to read the do
 
 We then retrieve the first column (`[0]`) of the DataFrame `df` and converts it into a string data type. The `.tolist()` method is then used to convert the column into a Python list. The resulting list, `lyrics`, contains the lyrics of the songs from the CSV file.
 
----
+
 <a name="step2.2"></a>
 ### Cleaning the Lyrics
 Once we have the dataset loaded, we need to clean the lyrics to remove any unnecessary elements that might affect the training process. We will remove special characters and stopwords, and eliminate repeating sentences. By performing these steps, we can create a clean and concise dataset for training our model.
@@ -141,7 +141,7 @@ Then we clean the lyrics by performing the following steps:
 
 After the execution of this code block, the `cleaned_lyrics` list will contain the lyrics without stopwords, special characters, and repeating sentences.
 
----
+
 <a name="step2.3"></a>
 ### Tokenizing the Lyrics
 To prepare the lyrics for training, we need to tokenize them into individual words. This step allows us to represent the lyrics as numerical sequences that can be fed into our model. We will create a vocabulary of unique words and create mappings between the words and their corresponding indices.
@@ -189,7 +189,7 @@ In this section we have tokenized the lyrics by splitting them into individual w
 ## Model Training
 Now that we have preprocessed our data, we can move on to training our machine-learning model. In this section, we will define our model architecture, set hyperparameters, and train the model using the preprocessed lyrics dataset.
 
----
+
 <a name="step3.1"></a>
 ### Defining the Model Architecture
 We will use a GRU-based (Gated Recurrent Unit) model for generating lyrics. The GRU is a type of recurrent neural network (RNN) that is well-suited for sequential data generation tasks. Our model will consist of an embedding layer, a GRU layer, and a fully connected layer for predicting the next word in the sequence.
@@ -237,7 +237,7 @@ class LyricsGenerator(nn.Module):
 
 This code defines the GRU-based model for lyrics generation. It is implemented as a subclass of `nn.Module`. The `__init__` method initializes the model with the vocabulary size, embedding dimension, and hidden dimension of the GRU layer. It defines an embedding layer (`nn.Embedding`), a GRU layer (`nn.GRU`), and a fully connected layer (`nn.Linear`) for the final output. The `forward` method defines the forward pass of the model, where the input `x` is first embedded, then passed through the GRU layer, and finally through the fully connected layer to generate the output.
 
----
+
 <a name="step3.2"></a>
 ### Training Loop
 In this subsection, we will define the training loop for our model. We will iterate over the preprocessed lyrics dataset in batches and perform forward and backward passes to optimize the model parameters. We will use the Adam optimiser and the cross-entropy loss function to train our model.
