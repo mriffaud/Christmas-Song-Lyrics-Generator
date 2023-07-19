@@ -2,7 +2,9 @@
 
 ![banner](https://images.pexels.com/photos/5708999/pexels-photo-5708999.jpeg?auto=compress&cs=tinysrgb&w=600)
 
-In the spirit of the holiday season, we are going to embark on a project to create a machine learning model that generates Christmas song lyrics. By training the model on a dataset of Christmas songs and carols, we can generate new and unique lyrics that capture the festive spirit. In this article, we will walk through the process of cleaning the data, training the model, and generating lyrics. We will be using PyTorch, a popular deep learning framework, for the implementation. So, let's dive in and spread the holiday cheer with our own AI-generated Christmas songs!
+In the spirit of the holiday season, we are going to embark on a project to create a machine-learning model that generates Christmas song lyrics. By training the model on a dataset of Christmas songs and carols, we can generate new and unique lyrics that capture the festive spirit. 
+
+In this article, we will walk through the process of cleaning the data, training the model, and generating lyrics. We will be using PyTorch, a popular machine-learning framework, for the implementation. So, let's dive in and spread the holiday cheer with our own AI-generated Christmas songs!
 
 ---
 ## Table of Content
