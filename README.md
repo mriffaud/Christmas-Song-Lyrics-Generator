@@ -1,6 +1,6 @@
 # Creating a Christmas Song Lyrics Generator with Machine Learning
 
-![banner](https://images.pexels.com/photos/5708999/pexels-photo-5708999.jpeg?auto=compress&cs=tinysrgb&w=600)
+![banner](https://media.istockphoto.com/id/1135217654/photo/image-of-christmas-turntable-vinyl-record-player-sound-technology-for-dj-to-mix-play-music.jpg?s=612x612&w=0&k=20&c=F8vKCkvsLwi5ynGimyG4QkX9KdSDkswUUUlqPqwY8IQ=)
 
 In the spirit of the holiday season, we are going to embark on a project to create a machine-learning model that generates Christmas song lyrics. By training the model on a dataset of Christmas songs and carols, we can generate new and unique lyrics that capture the festive spirit. 
 
