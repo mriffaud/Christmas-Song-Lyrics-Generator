@@ -6,17 +6,17 @@ In the spirit of the holiday season, we are going to embark on a project to crea
 
 ---
 ## Table of Content
-1. [ Data ](#data)
-2. [ Importing Library ](#step1)
-3. [ Data Preprocessing ](#step2)
-   3.1 [ Downloading and Reading the Dataset ](#step2.1)
-   3.2 [ Cleaning the Lyrics ](#step2.1)
-   3.3 [ Tokenizing the Lyrics ](#step2.3)
-4. [ Model Training ](#step3)
-   4.1 [ Defining the Model Architecture ](#step3.1)
-   4.2 [ Training Loop ](#step3.2)
-5. [ Lyrics Generation ](#step4)
-6. [ Conclusion ](#step5)
+- [1. Data ](#data)
+- [2. Importing Library ](#step1)
+- [3. Data Preprocessing ](#step2)
+  * [3.1 Downloading and Reading the Dataset ](#step2.1)
+  * [3.2 Cleaning the Lyrics ](#step2.1)
+  * [3.3 Tokenizing the Lyrics ](#step2.3)
+- [4. Model Training ](#step3)
+  * [4.1 Defining the Model Architecture ](#step3.1)
+  * [4.2 Training Loop ](#step3.2)
+- [5 Lyrics Generation ](#step4)
+- [6 Conclusion ](#step5)
 
 
 ---
