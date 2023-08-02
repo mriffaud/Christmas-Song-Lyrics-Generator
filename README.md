@@ -370,3 +370,4 @@ By updating the `input_seq` tensor and printing the predicted word, the code all
 ## Conclusion
 In this article, we have explored the process of creating a Christmas song lyrics generator using machine learning. We learned how to preprocess the data, train the model, and generate lyrics. By leveraging PyTorch, we were able to create a GRU-based model that generates unique lyrics. This project demonstrates the power of machine learning in creative tasks and provides a fun way to celebrate the holiday season. So go ahead, create your own Christmas song lyrics generator and spread the festive cheer!
 
+![elf](https://dailytrojan.com/wp-content/uploads/2015/11/christmasmusic.gif)
