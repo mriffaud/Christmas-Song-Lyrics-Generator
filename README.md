@@ -64,7 +64,7 @@ Here's a breakdown of each library imported in the code:
 * `requests`: This library allows sending HTTP requests to retrieve data from URLs. It is used to download the CSV file from a given URL in the code.
 * `io`: This library provides tools for handling I/O operations, including reading and writing data to streams and files. In this code, it is used to read the content of the downloaded file.
 * `torch`: This library is PyTorch, a popular deep learning framework. It provides functionality for creating and training neural networks, as well as tensor operations and GPU acceleration.
-* `torch.nn` (nn): This module provides classes and functions for defining and training neural networks in PyTorch. It includes various layers, loss functions, and optimization algorithms.
+* `torch.nn` (nn): This module provides classes and functions for defining and training neural networks in PyTorch. It includes various layers, loss functions, and optimisation algorithms.
 * `torch.utils.data`: This module provides tools for creating and working with datasets and data loaders in PyTorch. It allows efficient loading and batching of data during model training.
 * `torch.nn.utils.rnn`: This module provides utility functions for working with recurrent neural networks (RNNs) in PyTorch. It includes functions for padding sequences and packing padded sequences.
 
@@ -182,7 +182,7 @@ for line in cleaned_lyrics:
     sequences.append(sequence)
 ```
 
-This code initializes an empty list called `sequences` to store the numerical sequences representing the lyrics. It iterates over each line in the `cleaned_lyrics` list and splits each line into words using the `split()` method. For each word in the line, the corresponding index from the `word_to_idx` dictionary is retrieved, and a list of these indices is created for the line. The resulting list of indices is appended to the `sequences` list.
+This code initialises an empty list called `sequences` to store the numerical sequences representing the lyrics. It iterates over each line in the `cleaned_lyrics` list and splits each line into words using the `split()` method. For each word in the line, the corresponding index from the `word_to_idx` dictionary is retrieved, and a list of these indices is created for the line. The resulting list of indices is appended to the `sequences` list.
 
 In this section we have tokenized the lyrics by splitting them into individual words, created mappings between words and their corresponding indices, and converted the lyrics into numerical sequences by replacing each word with its corresponding index.
 
@@ -209,7 +209,7 @@ class LyricsDataset(Dataset):
         return torch.LongTensor(self.sequences[idx])
 ```
 
-This code defines a custom dataset class `LyricsDataset` that inherits from `torch.utils.data.Dataset`. The `__init__` method initializes the dataset object with a list of sequences. The `__len__` method returns the length of the dataset (number of sequences). The `__getitem__` method returns an individual sequence at the specified index as a `torch.LongTensor`.
+This code defines a custom dataset class `LyricsDataset` that inherits from `torch.utils.data.Dataset`. The `__init__` method initialises the dataset object with a list of sequences. The `__len__` method returns the length of the dataset (number of sequences). The `__getitem__` method returns an individual sequence at the specified index as a `torch.LongTensor`.
 
 ```python
 # Pad the sequences and create data loader
@@ -242,7 +242,7 @@ This code defines the GRU-based model for lyrics generation. It is implemented a
 
 <a name="step3.2"></a>
 ### Training Loop
-In this subsection, we will define the training loop for our model. We will iterate over the preprocessed lyrics dataset in batches and perform forward and backward passes to optimize the model parameters. We will use the Adam optimiser and the cross-entropy loss function to train our model.
+In this subsection, we will define the training loop for our model. We will iterate over the preprocessed lyrics dataset in batches and perform forward and backward passes to optimise the model parameters. We will use the Adam optimiser and the cross-entropy loss function to train our model.
 
 ```python
 # Set the hyperparameters
@@ -253,22 +253,22 @@ num_epochs = 50
 learning_rate = 0.001
 ```
 
-These lines define the hyperparameters for the model training process. `vocab_size` is the size of the vocabulary, `embedding_dim` is the dimensionality of the word embeddings, `hidden_dim` is the number of hidden units in the GRU layer, `num_epochs` is the number of training epochs, and `learning_rate` is the learning rate for the optimizer.
+These lines define the hyperparameters for the model training process. `vocab_size` is the size of the vocabulary, `embedding_dim` is the dimensionality of the word embeddings, `hidden_dim` is the number of hidden units in the GRU layer, `num_epochs` is the number of training epochs, and `learning_rate` is the learning rate for the optimiser.
 
 ```python
-# Initialize the model
+# Initialise the model
 model = LyricsGenerator(vocab_size, embedding_dim, hidden_dim)
 ```
 
-This line initializes an instance of the `LyricsGenerator` model with the specified hyperparameters.
+This line initialises an instance of the `LyricsGenerator` model with the specified hyperparameters.
 
 ```python
-# Define the loss function and optimizer
+# Define the loss function and optimiser
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+optimiser = torch.optim.Adam(model.parameters(), lr=learning_rate)
 ```
 
-These lines define the loss function and optimizer for training the model. `nn.CrossEntropyLoss()` is used as the loss function, which combines a softmax activation function with the cross-entropy loss. `torch.optim.Adam()` is used as the optimizer, which applies the Adam optimization algorithm to update the model parameters based on the computed gradients.
+These lines define the loss function and optimiser for training the model. `nn.CrossEntropyLoss()` is used as the loss function, which combines a softmax activation function with the cross-entropy loss. `torch.optim.Adam()` is used as the optimiser, which applies the Adam optimisation algorithm to update the model parameters based on the computed gradients.
 
 ```python
 # Training loop
@@ -281,10 +281,10 @@ for epoch in range(num_epochs):
         outputs = model(inputs)
         loss = criterion(outputs.transpose(1, 2), targets)
         
-        # Backward and optimize
-        optimizer.zero_grad()
+        # Backward and optimise
+        optimiser.zero_grad()
         loss.backward()
-        optimizer.step()
+        optimiser.step()
     
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 ```
@@ -296,7 +296,7 @@ These lines define the training loop that iterates over the specified number of 
 
 The forward pass is performed by passing the `inputs` to the model, which generates predicted outputs. The loss is calculated by comparing the predicted outputs with the `targets` using the `criterion` (cross-entropy loss). 
 
-The optimizer's gradients are set to zero using `optimizer.zero_grad()`, the loss gradients are computed using `loss.backward()`, and the optimizer's `step()` function is called to update the model parameters based on the gradients.
+The optimiser's gradients are set to zero using `optimiser.zero_grad()`, the loss gradients are computed using `loss.backward()`, and the optimiser's `step()` function is called to update the model parameters based on the gradients.
 
 After each epoch, the current loss is printed to track the progress of the training process.
 
