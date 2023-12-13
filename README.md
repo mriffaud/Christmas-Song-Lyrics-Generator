@@ -237,7 +237,7 @@ class LyricsGenerator(nn.Module):
         return output
 ```
 
-This code defines the GRU-based model for lyrics generation. It is implemented as a subclass of `nn.Module`. The `__init__` method initializes the model with the vocabulary size, embedding dimension, and hidden dimension of the GRU layer. It defines an embedding layer (`nn.Embedding`), a GRU layer (`nn.GRU`), and a fully connected layer (`nn.Linear`) for the final output. The `forward` method defines the forward pass of the model, where the input `x` is first embedded, then passed through the GRU layer, and finally through the fully connected layer to generate the output.
+This code defines the GRU-based model for lyrics generation. It is implemented as a subclass of `nn.Module`. The `__init__` method initialises the model with the vocabulary size, embedding dimension, and hidden dimension of the GRU layer. It defines an embedding layer (`nn.Embedding`), a GRU layer (`nn.GRU`), and a fully connected layer (`nn.Linear`) for the final output. The `forward` method defines the forward pass of the model, where the input `x` is first embedded, then passed through the GRU layer, and finally through the fully connected layer to generate the output.
 
 
 <a name="step3.2"></a>
