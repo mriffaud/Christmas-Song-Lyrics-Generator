@@ -81,7 +81,7 @@ Before we can start training our machine learning model, we need to preprocess t
 We will begin by downloading a dataset of Christmas song lyrics from a publicly available source. Using the `requests` library, we can fetch the dataset from a URL. Then, using the `pandas` library, we will read the downloaded dataset into a pandas DataFrame.
 
 ```python
-# Downloading the csv file from your GitHub account
+# Downloading the csv file from the GitHub account
 url = "https://gist.githubusercontent.com/DeastinY/899d532069febdb969d50eb68b7be583/raw/d4c2b7d6cd58639274fa2f061db6905c58853947/input.txt"
 download = requests.get(url).content
 
